@@ -27,10 +27,10 @@
     <ClCompile Include="point.C">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ps1-nishida.cpp">
+    <ClCompile Include="ps1-nishida.C">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="main.C">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -54,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ps1-nishida.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

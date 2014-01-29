@@ -1,28 +1,22 @@
+#include <vector>
 #include "point.h"
 #include "ps1-nishida.h"
 
+using namespace std;
+
 int main() {
-	InputPoint p0(0, 10);
-	InputPoint p1(0, 0);
-	InputPoint p2(10, 1);
-	InputPoint p3(10, 10);
-	InputPoint p4(20, 20);
-	InputPoint p5(20, -10);
+	Points points;	
+	for (int i = 0; i < 10; i++) {
+		points.push_back(new InputPoint(acp::randomNumber(0, 100), acp::randomNumber(0, 100)));
+		std::cout << "(" << points[i]->getP().getX().mid() << ", " << points[i]->getP().getX().mid() << ")" << std::endl;
+	}
 
-	Points points;
-	points.push_back(&p0);
-	points.push_back(&p1);
-	points.push_back(&p2);
-	points.push_back(&p3);
-	points.push_back(&p4);
-	points.push_back(&p5);
-
-	PV2 center(10, 10);
+	PV2 center;
 	Parameter radius;
 	minDisc(points, center, radius);
 
-	std::cout << "Center: (" << center.getX().lb() << ", " << center.getY().lb() << ")" << std::endl;
-	std::cout << "Radius: " << radius.lb() << std::endl;
+	std::cout << "Center: (" << center.getX().mid() << ", " << center.getY().mid() << ")" << std::endl;
+	std::cout << "Radius: " << radius.mid() << std::endl;
 
 	return 0;
 }

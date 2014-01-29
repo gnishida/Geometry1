@@ -26,6 +26,7 @@ Parameter lengthSquared(const PV2 &vector) {
  * @param radiusSquared	the resulting squared radius of the minimum disc
  */
 void minDiscWith2Points(Points &points, int num, Point *p1, Point *p2, PV2 &center, Parameter &radiusSquared) {
+	// create the minimum disc by using the given two points
 	center = (p1->getP() + p2->getP()) * 0.5;
 	radiusSquared = lengthSquared(p1->getP() - center);
 
@@ -49,6 +50,7 @@ void minDiscWith2Points(Points &points, int num, Point *p1, Point *p2, PV2 &cent
  * @param radiusSquared	the resulting squared radius of the minimum disc
  */
 void minDiscWithPoint(Points &points, int num, Point *p, PV2 &center, Parameter &radiusSquared) {
+	// create the minimum disc by using the first point and the given point
 	center = (p->getP() + points[0]->getP()) * 0.5;
 	radiusSquared = lengthSquared(p->getP() - center);
 		
@@ -68,6 +70,9 @@ void minDiscWithPoint(Points &points, int num, Point *p, PV2 &center, Parameter 
  * @param radius		the resulting radius of the minimum disc
  */
 void minDisc(Points &points, PV2 &center, Parameter &radius) {
+	assert(points.size() >= 3);
+
+	// create the minimum disc by using the first two points
 	center = (points[0]->getP() + points[1]->getP()) * 0.5;
 	Parameter radiusSquared = lengthSquared(points[0]->getP() - center);
 
