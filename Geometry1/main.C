@@ -1,8 +1,9 @@
 #include <vector>
 #include "point.h"
-#include "ps1-nishida.h"
 
 using namespace std;
+
+void minDisc(Points &points, PV2 &center, Parameter &radius);
 
 int main() {
 	Points points;	
